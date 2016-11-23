@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  Open developer console to see the output and refresh.
+  <br>
+  If the post has already been voted, you will see:
+
+  <code>Error: 10 assert_exception: Assert Exception</code>
+
+  <br><br>
+  You can change the post to a different steemit.com post in index.html
+
+
+<script src="../node_modules/steem/dist/steem.min.js"></script>
+<script type="text/javascript">
+    steem.broadcast.vote("5KAmawRVwhLRc41NECMeqfGCuq6Zj3xu6BK2Hj4a3rqS23GBB9Y", "barbara2",
+        "steemfest", "steemfest-interview-series-xeroc", 10000, function(err, result) {
+        console.log(err, result);
+    });
+</script>
+
+</body>
+</html>
